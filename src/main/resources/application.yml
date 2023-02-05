@@ -1,0 +1,31 @@
+spring:
+  security:
+    oauth2:
+      client:
+        principal: twitchUser
+        registration-id: twitch
+        registration:
+          twitch:
+            client-id: ecafhwsnk92wf48eckawwg3430e6xm
+            client-secret: 6lhkuceo93wk9ps2uwgqvfxb2wjvet
+            scope: [ ]
+            authorization-grant-type: client_credentials
+        provider:
+          twitch:
+            token-uri: https://id.twitch.tv/oauth2/token
+      resourceserver:
+        jwt:
+          issuer-uri: ${MZP_OAUTH_SERVER_ISSUER_URI:https://uat-everest-oauth.pzu.pl}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: create-drop
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: karol123
+
+twitch:
+  host: api.twitch.tv
+  schema: https
