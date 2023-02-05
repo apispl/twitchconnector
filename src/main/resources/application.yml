@@ -6,8 +6,8 @@ spring:
         registration-id: twitch
         registration:
           twitch:
-            client-id: ecafhwsnk92wf48eckawwg3430e6xm
-            client-secret: 6lhkuceo93wk9ps2uwgqvfxb2wjvet
+            client-id: yourOwn
+            client-secret: yourOwn
             scope: [ ]
             authorization-grant-type: client_credentials
         provider:
@@ -15,7 +15,7 @@ spring:
             token-uri: https://id.twitch.tv/oauth2/token
       resourceserver:
         jwt:
-          issuer-uri: ${MZP_OAUTH_SERVER_ISSUER_URI:https://uat-everest-oauth.pzu.pl}
+          issuer-uri: yourOwn
   jpa:
     properties:
       hibernate:
